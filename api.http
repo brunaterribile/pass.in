@@ -16,3 +16,11 @@ Content-Type: application/json
   "name": "Bruna Terribile",
   "email": "brunaterribile@gmail.com"
 }
+
+###
+
+GET http://localhost:3333/events/d052f8d5-f8ea-4928-a71f-56e2467e603b
+
+###
+
+GET http://localhost:3333/attendees/3/badge
