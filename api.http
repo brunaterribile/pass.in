@@ -2,7 +2,17 @@ POST http://localhost:3333/events
 Content-Type: application/json
 
 {
-  "title": "Unite Summit",
-  "details": "Um evento para quem é apaixonado por programação",
+  "title": "Code Rank 2024",
+  "details": "Um evento para quem é louco por desafios",
   "maximunAttendees": 100
+}
+
+###
+
+POST http://localhost:3333/events/7f18e977-3d6b-4ba4-b49b-fa9bd7694556/attendees
+Content-Type: application/json
+
+{
+  "name": "Bruna Terribile",
+  "email": "brunaterribile@gmail.com"
 }
