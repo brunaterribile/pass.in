@@ -2,14 +2,14 @@ POST http://localhost:3333/events
 Content-Type: application/json
 
 {
-  "title": "Code Rank 2024",
-  "details": "Um evento para quem é louco por desafios",
-  "maximunAttendees": 100
+  "title": "Aulão React Ao Vivo",
+  "details": "Revisão especial de react para quem quer acelerar seu aprendizado!",
+  "maximumAttendees": 2
 }
 
 ###
 
-POST http://localhost:3333/events/7f18e977-3d6b-4ba4-b49b-fa9bd7694556/attendees
+POST http://localhost:3333/events/d052f8d5-f8ea-4928-a71f-56e2467e603b/attendees
 Content-Type: application/json
 
 {
