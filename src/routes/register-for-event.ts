@@ -25,6 +25,19 @@ export async function registerForEvent(app: FastifyInstance) {
       const { eventId } = req.params;
       const { name, email } = req.body;
 
+      const attendeeFromEmail = await prisma.attendee.findUnique({
+        where: {
+          eventId_email: {
+            email, 
+            eventId,
+          }
+        }
+      })
+
+      if(attendeeFromEmail !== null) {
+        throw new Error("This email is already registered for this event.")
+      }
+
       const attendee =  await prisma.attendee.create({
         data: {
           name,
@@ -33,5 +46,7 @@ export async function registerForEvent(app: FastifyInstance) {
         }
       }
       )
+
+      return reply.status(201).send({ attendeeId: attendee.id })
     })
 }
