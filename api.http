@@ -2,25 +2,33 @@ POST http://localhost:3333/events
 Content-Type: application/json
 
 {
-  "title": "Aulão React Ao Vivo",
-  "details": "Revisão especial de react para quem quer acelerar seu aprendizado!",
-  "maximumAttendees": 2
+  "title": "Conferência Mulheres na Programação",
+  "details": "Venha participar de uma comunidade de mulheres que programam!",
+  "maximumAttendees": 50
 }
 
 ###
 
-POST http://localhost:3333/events/d052f8d5-f8ea-4928-a71f-56e2467e603b/attendees
+POST http://localhost:3333/events/a3e5d651-2549-4d95-9e41-423de17636d3/attendees
 Content-Type: application/json
 
 {
-  "name": "Bruna Terribile",
-  "email": "brunaterribile@gmail.com"
+  "name": "Mariana Cavalcanti",
+  "email": "maricavalcanti@gmail.com"
 }
 
 ###
 
-GET http://localhost:3333/events/d052f8d5-f8ea-4928-a71f-56e2467e603b
+GET http://localhost:3333/events/2a5196b9-d644-40c7-a0a7-34e758ac2ad4
 
 ###
 
-GET http://localhost:3333/attendees/3/badge
+GET http://localhost:3333/attendees/5/badge
+
+###
+
+GET http://localhost:3333/attendees/10/check-in
+
+###
+
+GET http://localhost:3333/events/2a5196b9-d644-40c7-a0a7-34e758ac2ad4/attendees?query=
